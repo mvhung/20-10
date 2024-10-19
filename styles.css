@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffe6e6;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  background-color: #ff6f61;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff3b2e;
+}
+
+.message {
+  margin-top: 20px;
+}
+
+.greeting {
+  font-size: 36px;
+  color: #ff3b2e;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.8;
+  margin-top: 15px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Thêm hiệu ứng xuất hiện cho lời chúc */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.cute-pets {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 50px;
+}
+
+.cat {
+  margin-right: 20px;
+  animation: bounce 2s infinite;
+}
+
+.dog {
+  animation: bounce 2s infinite 0.5s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
